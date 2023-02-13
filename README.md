@@ -41,7 +41,7 @@ After these steps you can now access the API at `http://localhost:3000`
         "hospitalName": "Bosco - Collins",
         "dateOfService": "Thu Nov 17 2022 21:20:18 GMT-0800 (Pacific Standard Time)",
         "billAmount": "457.22"
-        }```
+        }
 
 
 #### Testing the server:
