@@ -1,28 +1,39 @@
 
 const express = require('express');
-const app = express();
-const port = 3000;
+const bodyParser = require('body-parser');
+const utils = require('./utils.js')
 
-app.use(express.json());
+
+const app = express();
+const port = process.env.port || 3000;
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 let bills = [];
 
 app.get('/', function (req, res) {
-  res.send('Demp App for Medical Bill Upload Service Using NodeJS and Express!');
+  res.send('App for Medical Bill Upload Service Using NodeJS and Express!');
 });
 
 app.get('/items', (req, res) => {
-    console.log(bill);
-    res.json(bills); // Getting all the bills
+    console.log(bills);
+    res.json(bills); // Sending all the bills
 });
 
 app.post('/items', (req, res) => {
     let bill = req.body; // Getting the data from the body of POST request
-    bills.push(bill);
     console.log(bill);
-    res.json(bill);
+    
+    if (!utils.isValidBill(bill)) { // Checking if the bill contains all the required properties 
+        res.status(400).json({ error: 'Invalid medical bill' });
+        return;
+    }
+
+    bills.push(bill);
+    res.json(bill); // Sending the newly added bill
 });
 
 app.listen(port, function () {
-  console.log('Medical app listening on port 3000!');
+  console.log('Medical bill API listening on port 3000!');
 });
