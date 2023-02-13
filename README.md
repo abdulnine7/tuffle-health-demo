@@ -54,9 +54,9 @@ npm run test
 
 
 #### Author:
-Abdul Noushad Sheikh
-San Diego State University
-asheikh9725@sdsu.edu
+Abdul Noushad Sheikh \
+San Diego State University \
+asheikh9725@sdsu.edu \
 www.abdul.co.in
 
 ###### My other NodeJS live project on Restful API &#8595;
