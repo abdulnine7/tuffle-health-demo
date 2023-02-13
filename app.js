@@ -1,7 +1,7 @@
 
 const express = require('express');
 const bodyParser = require('body-parser');
-const utils = require('./utils.js')
+const utils = require('./utils')
 
 
 const app = express();
@@ -34,6 +34,8 @@ app.post('/items', (req, res) => {
     res.json(bill); // Sending the newly added bill
 });
 
-app.listen(port, function () {
+var server = app.listen(port, function () {
   console.log('Medical bill API listening on port 3000!');
 });
+
+module.exports = server // exporting the module for testing purpose, this can be removed in prod

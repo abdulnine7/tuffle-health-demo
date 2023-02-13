@@ -17,9 +17,14 @@ cd tuffle-health-demo
 npm install
 ```
 
-3. Start the Server
+3. Start the Server in dev mode
 ```bash
-npm start
+npm run dev
+```
+
+4. Or Start the Server in Regular mode
+```bash
+npm run start
 ```
 
 After these steps you can now access the API at `http://localhost:3000`
@@ -37,3 +42,30 @@ After these steps you can now access the API at `http://localhost:3000`
         "dateOfService": "Thu Nov 17 2022 21:20:18 GMT-0800 (Pacific Standard Time)",
         "billAmount": "457.22"
         }```
+
+
+#### Testing the server:
+
+After you have setup the project and installed the dependencies, you can test the API endpoints with the following command,
+
+```bash
+npm run test
+```
+
+
+#### Author:
+Abdul Noushad Sheikh
+San Diego State University
+asheikh9725@sdsu.edu
+www.abdul.co.in
+
+###### My other NodeJS live project on Restful API &#8595;
+
+1. www.2minutejson.com 
+    >Built this API server for JOSN data transfer using OTP, used for www.webnotes.ml
+2. www.jobsexplorer.in 
+    >Old and Unmaintained, so few things might not work not as this is based on Web Scrapping to JSON API
+
+You can also see my frontend designing skills from my website www.abdul.co.in 
+
+Github: @abdulnine7
