@@ -50,10 +50,11 @@ After you have setup the project and installed the dependencies, you can test th
 
 ```bash
 npm run test
-```
+``` 
 
 
-#### Author:
+
+### About the Author:
 Abdul Noushad Sheikh \
 San Diego State University \
 asheikh9725@sdsu.edu \
